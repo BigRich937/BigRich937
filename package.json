@@ -1,0 +1,21 @@
+{
+  "name": "cronos-token",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ERC-20 token deployable to the Cronos EVM chain",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network cronosTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network cronos"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.29.1"
+  }
+}
