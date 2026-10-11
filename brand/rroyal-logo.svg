@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#5b2a9e"/>
+      <stop offset="0.6" stop-color="#2e0f5e"/>
+      <stop offset="1" stop-color="#170634"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1b8"/>
+      <stop offset="0.45" stop-color="#f2c14e"/>
+      <stop offset="1" stop-color="#b9831f"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe9a3"/>
+      <stop offset="0.5" stop-color="#d9a535"/>
+      <stop offset="1" stop-color="#8f5f12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- coin body -->
+  <circle cx="256" cy="256" r="248" fill="url(#ring)"/>
+  <circle cx="256" cy="256" r="226" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="212" fill="none" stroke="#f2c14e" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="2 10"/>
+
+  <!-- crown -->
+  <g transform="translate(256 196)">
+    <path d="M-112 52 L-128 -52 L-62 -6 L0 -82 L62 -6 L128 -52 L112 52 Z"
+          fill="url(#gold)" stroke="#7a4f0c" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="-114" y="52" width="228" height="26" rx="6" fill="url(#gold)" stroke="#7a4f0c" stroke-width="4"/>
+    <circle cx="-128" cy="-56" r="13" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
+    <circle cx="0" cy="-88" r="15" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
+    <circle cx="128" cy="-56" r="13" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
+    <!-- jewels -->
+    <circle cx="0" cy="22" r="14" fill="#e0245e" stroke="#7a4f0c" stroke-width="3"/>
+    <circle cx="-62" cy="30" r="9" fill="#2bb3e6" stroke="#7a4f0c" stroke-width="3"/>
+    <circle cx="62" cy="30" r="9" fill="#2bb3e6" stroke="#7a4f0c" stroke-width="3"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="256" y="380" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="116"
+        fill="url(#gold)" stroke="#7a4f0c" stroke-width="3" letter-spacing="4">RR<tspan font-size="84" dy="-2">x</tspan></text>
+</svg>

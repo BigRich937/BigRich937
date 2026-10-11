@@ -9,7 +9,8 @@
     "deploy:testnet": "hardhat run scripts/deploy.js --network cronosTestnet",
     "deploy:mainnet": "hardhat run scripts/deploy.js --network cronos",
     "deploy-app:testnet": "hardhat run scripts/deploy-app.js --network cronosTestnet",
-    "deploy-app:mainnet": "hardhat run scripts/deploy-app.js --network cronos"
+    "deploy-app:mainnet": "hardhat run scripts/deploy-app.js --network cronos",
+    "lock-liquidity:mainnet": "hardhat run scripts/lock-liquidity.js --network cronos"
   },
   "license": "MIT",
   "dependencies": {

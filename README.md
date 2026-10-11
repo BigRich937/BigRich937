@@ -18,9 +18,10 @@ These settings live in `token.config.js`.
 - [x] Launched on Cronos testnet and checked in MetaMask
 - [x] Launched on Cronos mainnet — all 100,000,000 RRx sent to the launch wallet `0x636653f148ba0215Ad40b7D7259C4168473324DA`
 - [x] Source code verified on the explorer: https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a#code
-- [ ] Choose the pool amounts (RRx + CRO) and the plan for the remaining supply
+- [x] Pool plan chosen: 10,000,000 RRx + 100,000 CRO on VVS Finance (starting price 1 RRx = 0.01 CRO)
 - [ ] Create the RRx / CRO pool on VVS Finance
-- [ ] Lock or burn the LP tokens
+- [ ] Lock the LP tokens for 6–12 months with `LiquidityLock` (`npm run lock-liquidity:mainnet`)
+- [ ] Submit logo and token info (see `brand/TOKEN_INFO.md`)
 
 The address is the same on both networks because it is derived from the deployer wallet and its
 transaction count, and this was the wallet's first transaction on each network.
@@ -38,6 +39,15 @@ A fixed-supply ERC-20 token (OpenZeppelin v5) with Hardhat scripts to deploy it 
 |----------------|----------|-----------------------------|---------------------------------------|
 | Cronos mainnet | 25       | https://evm.cronos.org      | https://explorer.cronos.org           |
 | Cronos testnet | 338      | https://evm-t3.cronos.org   | https://explorer.cronos.org/testnet   |
+
+## Liquidity lock
+
+`LiquidityLock` holds the VVS Finance LP tokens until a fixed date. Nobody can withdraw them
+early, and the date can only be pushed later, never earlier. After adding liquidity on VVS:
+
+1. Put the LP token address in `.env` as `LP_TOKEN_ADDRESS`, and optionally `LOCK_MONTHS` (default 12).
+2. Run `npm run lock-liquidity:mainnet`. It deploys the lock and verifies it on the explorer.
+3. Send your LP tokens to the printed lock address.
 
 ## Delivery app: payments and fee escrow
 
