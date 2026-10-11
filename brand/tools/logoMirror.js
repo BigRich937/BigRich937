@@ -9,7 +9,9 @@ const { defs, pin, scepterX, sparkle } = globalThis.parts;
 const f = (n) => +n.toFixed(2);
 
 // mirror: "left" = Я x R (bowls face outward), "right" = R x Я (bowls face inward)
-function logo(font, mirror, rodRatio) {
+function logo(font, mirror, rodRatio, opts = {}) {
+  const GAP = opts.gap ?? GAP_ARG, PIN_MIDDLE = opts.pinMiddle ?? PIN_MIDDLE_ARG;
+  const showTrail = opts.trail ?? true, showSparkles = opts.sparkles ?? true;
   const measure = (size) => {
     const bb = font.getPath("R", 0, 0, size).getBoundingBox();
     const capH = -bb.y1, rW = bb.x2 - bb.x1; // use ink width so spacing is even on both sides
@@ -37,19 +39,19 @@ function logo(font, mirror, rodRatio) {
   const trail = `<path d="M${f(left - 22)} ${f(base + 26)} C${f(left + 110)} ${f(base + 64)} ${f(right - 20)} ${f(base + 42)} ${f(right + 22)} ${f(base - m.capH * 0.7)}
     C${f(right - 34)} ${f(base + 22)} ${f(left + 100)} ${f(base + 40)} ${f(left - 22)} ${f(base + 26)}Z" fill="url(#trail)"/>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">${defs}
-  ${trail}
+  ${showTrail ? trail : ""}
   <g filter="url(#lift)">${leftR}${rightR}
     <g transform="translate(${f(mx)} ${f(my)})">${scepterX(m.capH * 1.02, m.capH * rodRatio)}</g></g>
   ${pinSvg}
-  ${sparkle(f(right + 22), f(base - m.capH * 0.7), 0.9)}
-  ${sparkle(f(left + 10), f(pinY + 34), 0.7, 0.75)}
-  ${sparkle(f(right - 24), f(pinY + 6), 0.5, 0.65)}
+  ${showSparkles ? sparkle(f(right + 22), f(base - m.capH * 0.7), 0.9) + sparkle(f(left + 10), f(pinY + 34), 0.7, 0.75) + sparkle(f(right - 24), f(pinY + 6), 0.5, 0.65) : ""}
 </svg>`;
 }
 
-const GAP = Number(process.argv[3] ?? 0.14);
-const PIN_MIDDLE = process.argv[5] === "pin-middle";
+const GAP_ARG = Number(process.argv[3] ?? 0.14);
+const PIN_MIDDLE_ARG = process.argv[5] === "pin-middle";
 const only = process.argv[4] ? process.argv[4].split(",") : null;
+module.exports = { logo };
+if (require.main === module) {
 const out = process.argv[2];
 fs.mkdirSync(out, { recursive: true });
 const VARIANTS = [
@@ -66,3 +68,4 @@ for (const [id, name, file, mirror, vibe] of VARIANTS.filter(([id]) => !only || 
 }
 fs.writeFileSync(`${out}/meta.json`, JSON.stringify(meta));
 console.log("ok");
+}

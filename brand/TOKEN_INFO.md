@@ -4,19 +4,20 @@ Copy-paste text and files for the Cronos Explorer token info form, and later for
 
 ## Logo
 
-A gold "RRx" wordmark on a transparent background. The "x" is two **crossed royal scepters** with a
-ruby at the center, a ruby **location pin** hovers above it (a nod to the RRoyal delivery app), and a
-golden delivery trail sweeps under the word up toward the pin. It works on dark and light backgrounds.
+A gold **Я x R** monogram set in Cinzel: the first R is mirrored so the two R's frame the center
+like wings, two crossed royal scepters form the "x", and a ruby **location pin** sits where the
+scepters cross, a nod to the RRoyal delivery app. A gold delivery trail sweeps underneath.
+The background is transparent, so it works on dark and light backgrounds.
 
 | File | Use |
 |------|-----|
 | `rroyal-logo.svg` | Master logo (scales to any size) |
 | `rroyal-logo-1024.png` / `-512.png` | Website, social media, app store art |
 | `rroyal-logo-256.png` | Explorer, CoinGecko, CoinMarketCap token logo (256×256 PNG) |
-| `rroyal-icon.svg` | Master icon: scepter "x" and pin only, for small sizes |
+| `rroyal-icon.svg` | Master icon: the monogram without the trail, enlarged for small sizes |
 | `rroyal-icon-512.png` | App icon, social profile picture |
 | `rroyal-icon-64.png` / `-32.png` | Wallet token lists, website favicon |
-| `rroyal-wordmark.svg` / `.png` | Wide "RRx ROYAL" version for website and app headers |
+| `rroyal-wordmark.svg` / `.png` | Wide version (monogram + "RROYAL") for website and app headers |
 | `logo-preview.png` | Preview on dark and light backgrounds and at small sizes |
 
 ## Basic details

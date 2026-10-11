@@ -1,14 +1,17 @@
 # RRoyal brand
 
-## Where the logo stands
+## Official logo (final)
 
-The current official logo (`rroyal-logo.*`, `rroyal-icon.*`, `rroyal-wordmark.*`) is the gold
-**RRx** wordmark in Montserrat: the "x" is two crossed royal scepters, a ruby location pin floats
-above it, and a gold delivery trail sweeps underneath.
+**Я x R monogram in Cinzel Medium**, with the ruby location pin at the center of the crossed
+scepters and the gold delivery trail underneath. The files at the top of this folder are the
+official set:
 
-We are exploring a **mirrored monogram** to replace it: **Я x R** (the first R flipped so the
-curves face outward), the scepter x in the middle, set in a lighter serif. Favorites so far are
-**Cinzel Medium** and **Cormorant Garamond**. The final font and spacing are still to be picked.
+- `rroyal-logo.svg` / `-1024.png` / `-512.png` / `-256.png`: main logo (256px is the token logo)
+- `rroyal-icon.svg` / `-512.png` / `-64.png` / `-32.png`: small-size icon (wallets, favicon)
+- `rroyal-wordmark.svg` / `.png`: wide header version with "RROYAL"
+- `logo-preview.png`: everything on dark and light backgrounds
+
+Regenerate with `node tools/finalLogo.js <out dir>` (see below).
 
 ## Exploration history (newest last)
 
@@ -20,17 +23,9 @@ curves face outward), the scepter x in the middle, set in a lighter serif. Favor
 | `monogram-options/` | Mirrored-R monogram, Я x R and R x Я, in Cinzel and Cormorant |
 | `monogram-tight/` | Я x R with the letters touching the scepters |
 | `monogram-closer/` | Я x R with the scepters overlapping the R's |
-| `monogram-gem-center/` | Even tighter, with the ruby pin moved to the center of the X ← latest |
+| `monogram-gem-center/` | Even tighter, with the ruby pin moved to the center of the X (chosen, in Cinzel) |
 
 Each folder has an `rrx-font-options.png` comparison sheet plus each option as SVG and PNG.
-
-## Next decisions
-
-1. Font: Cinzel or Cormorant Garamond.
-2. Gem: in the center of the X (latest), or floating above it.
-3. Spacing: keep the latest tightness or adjust.
-
-Then generate the final set: 256px token logo, small wallet/favicon icon, wide website wordmark.
 
 ## Regenerating the logos
 
