@@ -39,6 +39,33 @@ A fixed-supply ERC-20 token (OpenZeppelin v5) with Hardhat scripts to deploy it 
 | Cronos mainnet | 25       | https://evm.cronos.org      | https://explorer.cronos.org           |
 | Cronos testnet | 338      | https://evm-t3.cronos.org   | https://explorer.cronos.org/testnet   |
 
+## Delivery app: payments and staking
+
+Two more contracts connect RRx to the delivery app:
+
+- **`RRoyalPayments`** — a customer pays for an order in RRx or a stablecoin by calling
+  `pay(orderId, token, amount)`. A fee (default 5%, at most 20%) goes to stakers and the rest
+  goes to the treasury wallet. Each order id can be paid only once. The app backend should
+  dispatch an order only after it sees the matching `OrderPaid(orderId, payer, token, amount, fee)`
+  event on chain, with the right token and amount.
+- **`RRoyalStaking`** — holders stake RRx and earn a share of every fee, in proportion to their
+  stake, paid in RRx and the stablecoin. They can withdraw (`withdraw` / `exit`) and claim
+  (`claim`) at any time. The owner can add reward tokens but can never move staked RRx or rewards.
+
+Deploy them (after the token is live):
+
+```bash
+npm run deploy-app:testnet   # also deploys a test stablecoin, tUSDC
+npm run deploy-app:mainnet   # needs STABLECOIN_ADDRESS (e.g. USDC on Cronos) in .env
+```
+
+Optional `.env` settings: `TREASURY_ADDRESS` (where order payments go, defaults to the deployer)
+and `FEE_BPS` (fee in basis points, `500` = 5%).
+
+> **Legal warning:** paying token holders a share of business fees is a strong signal that
+> regulators would treat RRx as a security. Get advice from a crypto lawyer before enabling
+> staking rewards for the public on mainnet.
+
 ## 1. Setup
 
 ```bash

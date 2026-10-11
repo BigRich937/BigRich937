@@ -7,7 +7,9 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:testnet": "hardhat run scripts/deploy.js --network cronosTestnet",
-    "deploy:mainnet": "hardhat run scripts/deploy.js --network cronos"
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network cronos",
+    "deploy-app:testnet": "hardhat run scripts/deploy-app.js --network cronosTestnet",
+    "deploy-app:mainnet": "hardhat run scripts/deploy-app.js --network cronos"
   },
   "license": "MIT",
   "dependencies": {
