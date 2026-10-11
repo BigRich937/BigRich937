@@ -1,4 +1,10 @@
-# Cronos Token Launch
+# RRoyal (RRx) — Cronos Token Launch
+
+| Name   | Symbol | Total supply | Decimals |
+|--------|--------|--------------|----------|
+| RRoyal | RRx    | 100,000,000  | 18       |
+
+These settings live in `token.config.js`.
 
 A fixed-supply ERC-20 token (OpenZeppelin v5) with Hardhat scripts to deploy it on the
 **Cronos EVM** chain.
@@ -24,7 +30,6 @@ npm test
 
 In `.env`, set:
 - `PRIVATE_KEY` is the private key of the wallet that deploys the token. Use a **new wallet made only for deploying**, and never commit or share this key.
-- `TOKEN_NAME`, `TOKEN_SYMBOL` and `TOKEN_SUPPLY` (in whole tokens, using 18 decimals).
 - `TOKEN_RECIPIENT` (optional) is the wallet that receives the supply. A hardware wallet or multisig is a good choice. If you leave it blank, the deployer wallet gets the supply.
 
 ## 2. Deploy to testnet first
@@ -45,7 +50,7 @@ In `.env`, set:
    ```
 3. **Verify the source code** so people can read the contract on the explorer. Get an API key from the Cronos Explorer developer portal and put it in `CRONOS_EXPLORER_API_KEY`. With the key set, the deploy script verifies the contract automatically. To verify by hand instead:
    ```bash
-   npx hardhat verify --network cronos <ADDRESS> "My Coin" "MYC" <SUPPLY_IN_WEI> <RECIPIENT>
+   npx hardhat verify --network cronos <ADDRESS> "RRoyal" "RRx" 100000000000000000000000000 <RECIPIENT>
    ```
 
 ## 4. After the deploy: making the coin tradable

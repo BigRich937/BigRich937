@@ -1,12 +1,10 @@
 const hre = require("hardhat");
+const tokenConfig = require("../token.config");
 
 async function main() {
-  const name = process.env.TOKEN_NAME;
-  const symbol = process.env.TOKEN_SYMBOL;
-  const supply = process.env.TOKEN_SUPPLY; // whole tokens, e.g. "1000000"
-  if (!name || !symbol || !supply) {
-    throw new Error("Set TOKEN_NAME, TOKEN_SYMBOL and TOKEN_SUPPLY in .env");
-  }
+  const name = process.env.TOKEN_NAME || tokenConfig.name;
+  const symbol = process.env.TOKEN_SYMBOL || tokenConfig.symbol;
+  const supply = process.env.TOKEN_SUPPLY || tokenConfig.supply; // whole tokens
 
   const [deployer] = await hre.ethers.getSigners();
   if (!deployer) throw new Error("Set PRIVATE_KEY in .env");

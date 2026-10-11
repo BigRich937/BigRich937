@@ -35,4 +35,14 @@ describe("Token", function () {
     await token.connect(treasury).burn(1000n);
     expect(await token.totalSupply()).to.equal(supply - 1000n);
   });
+
+  it("deploys with the configured RRoyal launch settings", async function () {
+    const cfg = require("../token.config");
+    const [owner] = await ethers.getSigners();
+    const amount = ethers.parseUnits(cfg.supply, 18);
+    const token = await ethers.deployContract("Token", [cfg.name, cfg.symbol, amount, owner.address]);
+    expect(await token.name()).to.equal("RRoyal");
+    expect(await token.symbol()).to.equal("RRx");
+    expect(await token.totalSupply()).to.equal(ethers.parseUnits("100000000", 18));
+  });
 });
