@@ -11,7 +11,10 @@ These settings live in `token.config.js`.
 | Network        | Contract address                             | Explorer |
 |----------------|----------------------------------------------|----------|
 | Cronos testnet | `0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a` | [view](https://explorer.cronos.org/testnet/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a) |
-| Cronos mainnet | not deployed yet                             |          |
+| Cronos mainnet | `0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a` | [view](https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a) |
+
+The address is the same on both networks because it is derived from the deployer wallet and its
+transaction count, and this was the wallet's first transaction on each network.
 
 A fixed-supply ERC-20 token (OpenZeppelin v5) with Hardhat scripts to deploy it on the
 **Cronos EVM** chain.
