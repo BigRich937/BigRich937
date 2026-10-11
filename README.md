@@ -19,6 +19,7 @@ These settings live in `token.config.js`.
 - [x] Launched on Cronos mainnet — all 100,000,000 RRx sent to the launch wallet `0x636653f148ba0215Ad40b7D7259C4168473324DA`
 - [x] Source code verified on the explorer: https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a#code
 - [x] Pool plan chosen: 10,000,000 RRx + 100,000 CRO on VVS Finance (starting price 1 RRx = 0.01 CRO)
+- [x] Decided: keep the current RRx contract and list it on VVS Finance (not a relaunch on Cronos Launch)
 - [ ] Create the RRx / CRO pool on VVS Finance
 - [ ] Lock the LP tokens for 12 months with `LiquidityLock` (`npm run lock-liquidity:mainnet`); more LP can be added to the lock anytime
 - [x] First logo done (gold "RRx" with scepter "x", ruby location pin and delivery trail), see `brand/`
