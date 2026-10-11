@@ -21,7 +21,8 @@ These settings live in `token.config.js`.
 - [x] Pool plan chosen: 10,000,000 RRx + 100,000 CRO on VVS Finance (starting price 1 RRx = 0.01 CRO)
 - [ ] Create the RRx / CRO pool on VVS Finance
 - [ ] Lock the LP tokens for 12 months with `LiquidityLock` (`npm run lock-liquidity:mainnet`); more LP can be added to the lock anytime
-- [x] Logo finalized (gold "RRx" with scepter "x", ruby location pin and delivery trail), see `brand/`
+- [x] First logo done (gold "RRx" with scepter "x", ruby location pin and delivery trail), see `brand/`
+- [ ] Pick the final mirrored "Я x R" monogram (see `brand/README.md` for options and next decisions)
 - [ ] Submit logo and token info (see `brand/TOKEN_INFO.md`)
 
 The address is the same on both networks because it is derived from the deployer wallet and its
