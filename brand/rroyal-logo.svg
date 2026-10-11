@@ -1,43 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
-      <stop offset="0" stop-color="#5b2a9e"/>
-      <stop offset="0.6" stop-color="#2e0f5e"/>
-      <stop offset="1" stop-color="#170634"/>
+    <radialGradient id="bg" cx="50%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#24305e"/><stop offset="0.55" stop-color="#101633"/><stop offset="1" stop-color="#04060e"/>
     </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff1b8"/>
-      <stop offset="0.45" stop-color="#f2c14e"/>
-      <stop offset="1" stop-color="#b9831f"/>
-    </linearGradient>
     <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffe9a3"/>
-      <stop offset="0.5" stop-color="#d9a535"/>
-      <stop offset="1" stop-color="#8f5f12"/>
+      <stop offset="0" stop-color="#fff2bd"/><stop offset="0.45" stop-color="#e0ab3e"/><stop offset="1" stop-color="#6e4508"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff5cc"/><stop offset="0.45" stop-color="#f2c14e"/><stop offset="1" stop-color="#a8721a"/>
+    </linearGradient>
+    <radialGradient id="ruby" cx="38%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#ff7fa6"/><stop offset="0.45" stop-color="#e0245e"/><stop offset="1" stop-color="#5e0420"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f2c14e" stop-opacity="0.5"/><stop offset="1" stop-color="#f2c14e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trail" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f2c14e" stop-opacity="0"/><stop offset="0.6" stop-color="#f2c14e" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#fff2bd" stop-opacity="0.95"/>
     </linearGradient>
   </defs>
-
-  <!-- coin body -->
-  <circle cx="256" cy="256" r="248" fill="url(#ring)"/>
-  <circle cx="256" cy="256" r="226" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="212" fill="none" stroke="#f2c14e" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="2 10"/>
-
-  <!-- crown -->
-  <g transform="translate(256 196)">
-    <path d="M-112 52 L-128 -52 L-62 -6 L0 -82 L62 -6 L128 -52 L112 52 Z"
-          fill="url(#gold)" stroke="#7a4f0c" stroke-width="4" stroke-linejoin="round"/>
-    <rect x="-114" y="52" width="228" height="26" rx="6" fill="url(#gold)" stroke="#7a4f0c" stroke-width="4"/>
-    <circle cx="-128" cy="-56" r="13" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
-    <circle cx="0" cy="-88" r="15" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
-    <circle cx="128" cy="-56" r="13" fill="url(#gold)" stroke="#7a4f0c" stroke-width="3"/>
-    <!-- jewels -->
-    <circle cx="0" cy="22" r="14" fill="#e0245e" stroke="#7a4f0c" stroke-width="3"/>
-    <circle cx="-62" cy="30" r="9" fill="#2bb3e6" stroke="#7a4f0c" stroke-width="3"/>
-    <circle cx="62" cy="30" r="9" fill="#2bb3e6" stroke="#7a4f0c" stroke-width="3"/>
-  </g>
-
-  <!-- wordmark -->
-  <text x="256" y="380" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="116"
-        fill="url(#gold)" stroke="#7a4f0c" stroke-width="3" letter-spacing="4">RR<tspan font-size="84" dy="-2">x</tspan></text>
+  <circle cx="256" cy="256" r="252" fill="url(#ring)"/>
+  <circle cx="256" cy="256" r="240" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#f2c14e" stroke-opacity="0.35" stroke-width="1.2"/>
+  <path d="M118 123 Q118 132 127 132 Q118 132 118 141 Q118 132 109 132 Q118 132 118 123Z" fill="#fff2bd" opacity="0.85"/><path d="M400 112.8 Q400 120 407.2 120 Q400 120 400 127.2 Q400 120 392.8 120 Q400 120 400 112.8Z" fill="#fff2bd" opacity="0.85"/><path d="M96 294.6 Q96 300 101.4 300 Q96 300 96 305.4 Q96 300 90.6 300 Q96 300 96 294.6Z" fill="#fff2bd" opacity="0.85"/><path d="M424 311.7 Q424 318 430.3 318 Q424 318 424 324.3 Q424 318 417.7 318 Q424 318 424 311.7Z" fill="#fff2bd" opacity="0.85"/><path d="M160 81.5 Q160 86 164.5 86 Q160 86 160 90.5 Q160 86 155.5 86 Q160 86 160 81.5Z" fill="#fff2bd" opacity="0.85"/><path d="M356 74.6 Q356 80 361.4 80 Q356 80 356 85.4 Q356 80 350.6 80 Q356 80 356 74.6Z" fill="#fff2bd" opacity="0.85"/>
+  <ellipse cx="256" cy="206" rx="200" ry="140" fill="url(#glow)"/>
+  <!-- delivery trail orbiting the crown -->
+  <path d="M84 262 C120 330 330 334 414 196 C318 304 140 306 84 262Z" fill="url(#trail)"/>
+  <circle cx="416" cy="192" r="5.5" fill="#fff6d6"/>
+  <circle cx="416" cy="192" r="11" fill="#fff6d6" opacity="0.25"/>
+  <g transform="translate(256 196) scale(0.86)"><path d="M-150 60 L-170 -70 L-95 10Z" fill="#f9d978" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-150 60 L-95 10 L-70 60Z" fill="#c98f22" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-95 10 L-60 -110 L-30 20Z" fill="#ffe9a6" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-95 10 L-30 20 L-70 60Z" fill="#e2ac3c" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-30 20 L0 -150 L30 20Z" fill="#fff3c9" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-30 20 L30 20 L0 60Z" fill="#e9b84a" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-70 60 L-30 20 L0 60Z" fill="#b77d18" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M0 60 L30 20 L70 60Z" fill="#a46d10" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M30 20 L60 -110 L95 10Z" fill="#e8b544" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M30 20 L95 10 L70 60Z" fill="#b9801a" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M95 10 L170 -70 L150 60Z" fill="#d49a2c" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M95 10 L150 60 L70 60Z" fill="#8f5c0c" stroke="#2a1a02" stroke-width="1.4" stroke-linejoin="round"/><path d="M-170 -86 L-160 -70 L-170 -60 L-180 -70Z" fill="#fff6d6" stroke="#2a1a02" stroke-width="1.4"/><path d="M-60 -126 L-50 -110 L-60 -100 L-70 -110Z" fill="#fff6d6" stroke="#2a1a02" stroke-width="1.4"/><path d="M0 -166 L10 -150 L0 -140 L-10 -150Z" fill="#fff6d6" stroke="#2a1a02" stroke-width="1.4"/><path d="M60 -126 L70 -110 L60 -100 L50 -110Z" fill="#fff6d6" stroke="#2a1a02" stroke-width="1.4"/><path d="M170 -86 L180 -70 L170 -60 L160 -70Z" fill="#fff6d6" stroke="#2a1a02" stroke-width="1.4"/><path d="M-150 60 L150 60 L140 96 L-140 96Z" fill="#d9a238" stroke="#2a1a02" stroke-width="1.4"/><path d="M-150 60 L150 60 L146 72 L-146 72Z" fill="#ffe39a"/><path d="M-128 84 H-34 M34 84 H128" stroke="#7a4d0a" stroke-width="3" stroke-dasharray="10 7" stroke-linecap="round"/></g>
+  <g transform="translate(256 278)">
+  <g transform="scale(0.62)">
+    <path d="M0 52 C-10 34 -34 14 -34 -8 A34 34 0 1 1 34 -8 C34 14 10 34 0 52Z" fill="url(#ruby)" stroke="#2a1a02" stroke-width="2.4"/>
+    <path d="M0 -42 L22 -20 L0 -8 L-22 -20Z" fill="#ff9ab8" opacity="0.85"/>
+    <path d="M-22 -20 L0 -8 L-12 26 L-32 -2Z" fill="#b30f43" opacity="0.9"/>
+    <path d="M22 -20 L0 -8 L12 26 L32 -2Z" fill="#7e0830" opacity="0.9"/>
+    <circle cx="0" cy="-12" r="9" fill="#2a0612" stroke="#ffb3c7" stroke-width="2"/>
+    <path d="M-16 -32 Q-6 -40 6 -38" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g></g>
+  <path d="M179.76 428L161.54 428L161.54 363.60L190.34 363.60Q204.41 363.60 212.00 369.99Q219.59 376.39 219.59 387.43L219.59 387.43Q219.59 394.70 216.10 399.99Q212.60 405.28 206.21 408.08Q199.81 410.89 190.98 410.89L190.98 410.89L171.66 410.89L179.76 403.25L179.76 428ZM220.88 428L201.38 428L185.37 404.54L204.78 404.54L220.88 428ZM179.76 369.58L179.76 405.18L171.66 396.81L189.88 396.81Q195.58 396.81 198.39 394.33Q201.19 391.84 201.19 387.43L201.19 387.43Q201.19 382.92 198.39 380.44Q195.58 377.95 189.88 377.95L189.88 377.95L171.66 377.95L179.76 369.58ZM251.84 428L233.62 428L233.62 363.60L262.42 363.60Q276.49 363.60 284.08 369.99Q291.67 376.39 291.67 387.43L291.67 387.43Q291.67 394.70 288.18 399.99Q284.68 405.28 278.29 408.08Q271.89 410.89 263.06 410.89L263.06 410.89L243.74 410.89L251.84 403.25L251.84 428ZM292.96 428L273.46 428L257.45 404.54L276.86 404.54L292.96 428ZM251.84 369.58L251.84 405.18L243.74 396.81L261.96 396.81Q267.66 396.81 270.47 394.33Q273.27 391.84 273.27 387.43L273.27 387.43Q273.27 382.92 270.47 380.44Q267.66 377.95 261.96 377.95L261.96 377.95L243.74 377.95L251.84 369.58Z" fill="url(#gold)" fill-rule="nonzero"/>
+    <g transform="translate(329.3 397.64)">
+    <g transform="rotate(-34)">
+      <rect x="-5" y="-34.04" width="10" height="68.08" rx="5" fill="url(#gold)" stroke="#2a1a02" stroke-width="1.6"/>
+      <circle cx="0" cy="-41.04" r="10" fill="url(#gold)" stroke="#2a1a02" stroke-width="1.6"/>
+      <circle cx="-3" cy="-44.04" r="3" fill="#fff6d6" opacity="0.9"/>
+      <rect x="-9" y="24.04" width="18" height="7" rx="3" fill="#b07a18" stroke="#2a1a02" stroke-width="1.2"/>
+    </g>
+    <g transform="rotate(34)">
+      <rect x="-5" y="-34.04" width="10" height="68.08" rx="5" fill="url(#gold)" stroke="#2a1a02" stroke-width="1.6"/>
+      <circle cx="0" cy="-41.04" r="10" fill="url(#gold)" stroke="#2a1a02" stroke-width="1.6"/>
+      <circle cx="-3" cy="-44.04" r="3" fill="#fff6d6" opacity="0.9"/>
+      <rect x="-9" y="24.04" width="18" height="7" rx="3" fill="#b07a18" stroke="#2a1a02" stroke-width="1.2"/>
+    </g><circle r="7" fill="url(#ruby)" stroke="#2a1a02" stroke-width="1.6"/></g>
 </svg>

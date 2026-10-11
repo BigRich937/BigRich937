@@ -4,12 +4,19 @@ Copy-paste text and files for the Cronos Explorer token info form, and later for
 
 ## Logo
 
+A faceted gold crown on midnight navy. The crown's jewel is a ruby **location pin** and its band
+is an engraved **delivery route**, a nod to the RRoyal delivery app, with a golden delivery trail
+orbiting the crown. In the wordmark, the "x" of RRx is two **crossed royal scepters**.
+
 | File | Use |
 |------|-----|
-| `rroyal-logo.svg` | Master file (scales to any size) |
-| `rroyal-logo-512.png` | Social media profile picture, website |
-| `rroyal-logo-256.png` | Explorer, CoinGecko, CoinMarketCap and wallet token lists (they ask for 256×256 PNG) |
-| `rroyal-logo-32.png` | Website favicon |
+| `rroyal-logo.svg` | Master full logo (scales to any size) |
+| `rroyal-logo-1024.png` / `-512.png` | Website, social media, app store art |
+| `rroyal-logo-256.png` | Explorer, CoinGecko, CoinMarketCap token logo (256×256 PNG) |
+| `rroyal-icon.svg` | Master icon: crown and pin only, for small sizes |
+| `rroyal-icon-512.png` | App icon, social profile picture |
+| `rroyal-icon-64.png` / `-32.png` | Wallet token lists, website favicon |
+| `logo-preview.png` | Preview of the logo and icon at full and small sizes |
 
 ## Basic details
 

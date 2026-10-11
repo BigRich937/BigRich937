@@ -20,7 +20,8 @@ These settings live in `token.config.js`.
 - [x] Source code verified on the explorer: https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a#code
 - [x] Pool plan chosen: 10,000,000 RRx + 100,000 CRO on VVS Finance (starting price 1 RRx = 0.01 CRO)
 - [ ] Create the RRx / CRO pool on VVS Finance
-- [ ] Lock the LP tokens for 6–12 months with `LiquidityLock` (`npm run lock-liquidity:mainnet`)
+- [ ] Lock the LP tokens for 12 months with `LiquidityLock` (`npm run lock-liquidity:mainnet`); more LP can be added to the lock anytime
+- [x] Logo finalized (crown, ruby location pin, scepter "x"), see `brand/`
 - [ ] Submit logo and token info (see `brand/TOKEN_INFO.md`)
 
 The address is the same on both networks because it is derived from the deployer wallet and its
