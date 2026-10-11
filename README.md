@@ -6,6 +6,13 @@
 
 These settings live in `token.config.js`.
 
+## Deployments
+
+| Network        | Contract address                             | Explorer |
+|----------------|----------------------------------------------|----------|
+| Cronos testnet | `0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a` | [view](https://explorer.cronos.org/testnet/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a) |
+| Cronos mainnet | not deployed yet                             |          |
+
 A fixed-supply ERC-20 token (OpenZeppelin v5) with Hardhat scripts to deploy it on the
 **Cronos EVM** chain.
 
