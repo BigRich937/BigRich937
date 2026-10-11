@@ -1,4 +1,4 @@
-// Deploys RRoyalStaking + RRoyalPayments and wires them to the RRx token.
+// Deploys RRoyalFeeVault + RRoyalPayments and sets RRx and a stablecoin as accepted payment tokens.
 // Testnet: also deploys a test stablecoin (tUSDC) unless STABLECOIN_ADDRESS is set.
 // Mainnet: STABLECOIN_ADDRESS is required.
 const hre = require("hardhat");
@@ -18,7 +18,7 @@ async function main() {
   console.log(`Deployer:  ${deployer.address}`);
   console.log(`RRx:       ${RRX_ADDRESS}`);
   console.log(`Treasury:  ${treasury}`);
-  console.log(`Fee:       ${feeBps / 100}% to stakers`);
+  console.log(`Fee:       ${feeBps / 100}% to the fee vault`);
 
   let stablecoin = process.env.STABLECOIN_ADDRESS;
   if (!stablecoin) {
@@ -32,21 +32,19 @@ async function main() {
     console.log(`Stablecoin: ${stablecoin}`);
   }
 
-  const staking = await ethers.deployContract("RRoyalStaking", [RRX_ADDRESS, deployer.address]);
-  await staking.waitForDeployment();
-  const stakingAddress = await staking.getAddress();
-  console.log(`Staking:   ${stakingAddress}`);
+  const vault = await ethers.deployContract("RRoyalFeeVault", [deployer.address]);
+  await vault.waitForDeployment();
+  const vaultAddress = await vault.getAddress();
+  console.log(`Fee vault: ${vaultAddress}`);
 
-  const payments = await ethers.deployContract("RRoyalPayments", [deployer.address, treasury, stakingAddress, feeBps]);
+  const payments = await ethers.deployContract("RRoyalPayments", [deployer.address, treasury, vaultAddress, feeBps]);
   await payments.waitForDeployment();
-  const paymentsAddress = await payments.getAddress();
-  console.log(`Payments:  ${paymentsAddress}`);
+  console.log(`Payments:  ${await payments.getAddress()}`);
 
   for (const token of [RRX_ADDRESS, stablecoin]) {
-    await (await staking.addRewardToken(token)).wait();
     await (await payments.setAcceptedToken(token, true)).wait();
   }
-  console.log("Done: RRx and the stablecoin are accepted for payments and paid out as staking rewards.");
+  console.log("Done: RRx and the stablecoin are accepted for payments; fees collect in the fee vault.");
 }
 
 main().catch((err) => {
