@@ -13,6 +13,15 @@ These settings live in `token.config.js`.
 | Cronos testnet | `0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a` | [view](https://explorer.cronos.org/testnet/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a) |
 | Cronos mainnet | `0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a` | [view](https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a) |
 
+## Launch status
+
+- [x] Launched on Cronos testnet and checked in MetaMask
+- [x] Launched on Cronos mainnet — all 100,000,000 RRx sent to the launch wallet `0x636653f148ba0215Ad40b7D7259C4168473324DA`
+- [x] Source code verified on the explorer: https://explorer.cronos.org/address/0x7C5524548FBF613b6B0A6BC8e2c534ED373b508a#code
+- [ ] Choose the pool amounts (RRx + CRO) and the plan for the remaining supply
+- [ ] Create the RRx / CRO pool on VVS Finance
+- [ ] Lock or burn the LP tokens
+
 The address is the same on both networks because it is derived from the deployer wallet and its
 transaction count, and this was the wallet's first transaction on each network.
 
