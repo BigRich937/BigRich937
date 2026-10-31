@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/BigRich937/rrx-token/claude/intelligent-pascal-r0229i/brand/rroyal-logo-256.png" alt="RRoyal (RRx) logo" width="140" />
+  <img src="brand/mark-256.png" alt="BigRich937 logo" width="140" />
 </p>
 
 <h1 align="center">BigRich937</h1>
-<p align="center">Building on <b>Cronos</b>: the <b>RRx</b> token and the apps that run on it.</p>
+<p align="center">Building on <b>Cronos</b>: the <b>RRx</b> token, <b>RR Delivery</b>, and <b>RR Creator</b>.</p>
 
 ---
 
